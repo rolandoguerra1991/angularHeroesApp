@@ -1,1 +1,25 @@
 <p>error-page works!</p>
+
+<ul>
+  <li>
+    <a routerLink="/auth/login">go to login page</a>
+  </li>
+  <li>
+    <a routerLink="/auth/register">go to register page</a>
+  </li>
+  <li>
+    <a routerLink="/heroes/listing">go to heroes listing</a>
+  </li>
+  <li>
+    <a routerLink="/heroes/create">go to heroes create</a>
+  </li>
+  <li>
+    <a routerLink="/heroes/search">go to heroes search</a>
+  </li>
+  <li>
+    <a [routerLink]="['/heroes/edit', 1]"> go to heroes edit</a>
+  </li>
+  <li>
+    <a [routerLink]="['/heroes', 1]"> go to hero</a>
+  </li>
+</ul>
