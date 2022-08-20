@@ -1,4 +1,18 @@
-<p>listing works!</p>
-<ul>
-  <li *ngFor="let hero of heroes">{{ hero.superhero }}</li>
-</ul>
+<h1>Heroes Listing</h1>
+<mat-divider class="divider"></mat-divider>
+
+<div
+  fxLayout="row wrap"
+  fxLayout.xs="column"
+  fxLayoutGap="20px"
+  fxLayoutAlign="center"
+>
+  <div
+    fxFlex="20"
+    fxFlex.lg="25"
+    fxFlex.md="30"
+    *ngFor="let hero of heroes"
+  >
+    <app-hero-card [hero]="hero"></app-hero-card>
+  </div>
+</div>
