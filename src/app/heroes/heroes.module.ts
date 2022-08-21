@@ -11,6 +11,7 @@ import { MaterialModule } from '../material/material.module';
 import { HeroCardComponent } from './components/hero-card/hero-card.component';
 import { HeroImagePipe } from './pipes/hero-image.pipe';
 import { FormsModule } from '@angular/forms';
+import { DeleteConfirmComponent } from './components/delete-confirm/delete-confirm.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     ListingComponent,
     HeroCardComponent,
     HeroImagePipe,
+    DeleteConfirmComponent,
   ],
   imports: [
     CommonModule,
