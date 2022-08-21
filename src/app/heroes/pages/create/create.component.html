@@ -1,1 +1,97 @@
-<p>create works!</p>
+<h1>New hero</h1>
+
+<div fxLayout="row" fxLayoutGap="40px">
+  <div fxFlex="50" fxLayout="column">
+
+    <div fxLayout="row" fxLayoutGap="40px">
+      <mat-form-field fxFlex="100" appearance="outline">
+        <mat-label>Super hero</mat-label>
+        <input
+          matInput
+          type="text"
+          required
+          [(ngModel)]="hero.superhero"
+        >
+      </mat-form-field>
+
+      <mat-form-field fxFlex="100" appearance="outline">
+        <mat-label>Alter ego</mat-label>
+        <input
+          matInput
+          type="text"
+          required
+          [(ngModel)]="hero.alter_ego"
+        >
+      </mat-form-field>
+    </div>
+
+    <div fxLayout="row" fxLayoutGap="40px">
+      <mat-form-field fxFlex="100" appearance="outline">
+        <mat-label>First appearance</mat-label>
+        <input
+          matInput
+          type="text"
+          required
+          [(ngModel)]="hero.first_appearance"
+        >
+      </mat-form-field>
+      <mat-form-field fxFlex="100" appearance="outline">
+        <mat-label>Characters</mat-label>
+        <input
+          matInput
+          type="text"
+          required
+          [(ngModel)]="hero.characters"
+        >
+      </mat-form-field>
+    </div>
+
+    <div fxLayout="row" fxLayoutGap="40px">
+      <mat-form-field fxFlex="100" appearance="outline">
+        <mat-label>Publisher</mat-label>
+        <mat-select
+          required
+          [(ngModel)]="hero.publisher"
+          >
+          <mat-option *ngFor="let publisher of publishers" [value]="publisher.id">
+            {{ publisher.desc }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field fxFlex="100" appearance="outline">
+        <mat-label>First appearance</mat-label>
+        <input
+          matInput
+          type="text"
+          required
+        >
+      </mat-form-field>
+    </div>
+
+    <div fxLayout="row" fxLayoutGap="40px">
+      <mat-form-field fxFlex="100" appearance="outline">
+        <mat-label>Photo Url</mat-label>
+        <input
+          matInput
+          type="url"
+          required
+        >
+      </mat-form-field>
+    </div>
+
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="saveHero()"
+    >
+      <mat-icon>
+        save
+      </mat-icon>
+      Save
+    </button>
+
+  </div>
+  <div fxFlex="50">
+    <img [src]="hero | heroImage">
+  </div>
+</div>
