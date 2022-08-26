@@ -22,4 +22,8 @@ export class LoginComponent {
     });
   }
 
+  withoutLogin() {
+    this.router.navigate(['heroes'])
+  }
+
 }
